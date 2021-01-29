@@ -23,7 +23,7 @@
     <div *ngFor="let meme of cat.memes; let odd = odd; index as index">
         <div *ngIf="odd; else ParBlock">
             <h2>{{meme.titulo}}</h2>
-            <img src="{{imgPrefix + meme.imagemURL}}">
+            <img [src]="imgPrefix + meme.imagemURL">
         </div>
         <ng-template #ParBlock>
             <h1>{{index}} é PAR</h1>
