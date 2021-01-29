@@ -1,0 +1,27 @@
+<p>exercicio-diretivas works!</p>
+
+<button (click)="toggleShow()">{{show?'Esconde':'Exibe'}}</button>
+
+<div *ngIf="show; else outroBloco">
+    Olá, estou dentro do ngIf.
+</div>
+
+<ng-template #outroBloco>
+    <div>
+        Else
+    </div>
+</ng-template>
+
+
+<!-- ngFor -->
+<ul>
+    <li *ngFor="let fruta of frutas; let index = index">{{10* (index + 1)}} - {{fruta}}</li>
+</ul>
+
+<div *ngFor="let cat of arrayImg">
+    <h1>{{cat.categoria}}</h1>
+    <div *ngFor="let meme of cat.memes">
+        <h2>{{meme.titulo}}</h2>
+        <img src="{{imgPrefix + meme.imagemURL}}">
+    </div>
+</div>

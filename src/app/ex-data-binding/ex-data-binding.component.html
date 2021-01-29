@@ -1,0 +1,44 @@
+<!-- Property Bindings -->
+<img [src]="imageURL" [width]="tamanhoDaImagem">
+
+<button [disabled]="botaoHabilitado"> Botão </button>
+
+<p [attr.aria-label]="botaoHabilitado ?
+  getTextoAcessivel() : 'Outro texto acessível' ">
+  Um texto qualquer...
+</p>
+
+<input [value]="getTextoAcessivel()">
+
+<!-- Event Bindings -->
+
+<button (click)="clicouNoBotao($event)"
+  (mouseenter)="passouMousePorCima($event)"
+> Clique aqui </button>
+
+
+<!-- Exercício Contador -->
+
+<!-- <app-exercicio-contador
+  [(valor)]="valorDoContador" (valorChange)="quandoMudarOValor($event)">
+</app-exercicio-contador> -->
+
+<app-contador></app-contador>
+
+<h2> Valor da variável dentro do ExercicioDatabing: {{ valorDoContador }} </h2>
+
+
+<!-- NgModel -->
+
+<input type="text" [(ngModel)]="meuTexto">
+
+<h2> Valor do meu texto: {{ meuTexto }} </h2>
+
+<select [(ngModel)]="valorNoDropdown">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select>
+
+<h2> Valor no Dropdown: {{ valorNoDropdown }} </h2>
