@@ -11,9 +11,9 @@ export class ExercicioDiretivasComponent implements OnInit {
 
   show = true;
 
-  imgPrefix ='https://raw.githubusercontent.com/vitorfgsantos/angular-memes-diretivas/master/images';
+  IMG_PREFIX ='https://raw.githubusercontent.com/vitorfgsantos/angular-memes-diretivas/master/images';
 
-  arrayImg = MEMES_AGRUPADOS_POR_CATEGORIA;
+  MEMES_GROUP = MEMES_AGRUPADOS_POR_CATEGORIA;
 
   frutas=[
     'Abacaxi',
@@ -22,6 +22,9 @@ export class ExercicioDiretivasComponent implements OnInit {
     'Uva'
   ]
 
+  classCSS = 'verde';
+  tsizeCSS = 'fonte-grande'
+
   constructor() { }
 
   ngOnInit(): void {
@@ -29,6 +32,11 @@ export class ExercicioDiretivasComponent implements OnInit {
 
   toggleShow(){
     this.show = !this.show;
+  }
+
+  colorSwitch(){
+    this.classCSS = this.classCSS==='verde'?'vermelho':'verde'
+    this.tsizeCSS = this.tsizeCSS===''?'fonte-grande':''
   }
 
 }

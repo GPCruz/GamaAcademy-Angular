@@ -1,6 +1,6 @@
 <p>exercicio-diretivas works!</p>
 
-<button (click)="toggleShow()">{{show?'Esconde':'Exibe'}}</button>
+<!-- <button (click)="toggleShow()">{{show?'Esconde':'Exibe'}}</button>
 
 <div *ngIf="show; else outroBloco">
     Olá, estou dentro do ngIf.
@@ -10,23 +10,34 @@
     <div>
         Else
     </div>
-</ng-template>
+</ng-template> -->
 
 
 <!-- ngFor -->
-<ul>
+<!-- <ul>
     <li *ngFor="let fruta of frutas; let index = index">{{10* (index + 1)}} - {{fruta}}</li>
-</ul>
+</ul> -->
 
-<div *ngFor="let cat of arrayImg">
-    <h1>{{cat.categoria}}</h1>
-    <div *ngFor="let meme of cat.memes; let odd = odd; index as index">
-        <div *ngIf="odd; else ParBlock">
-            <h2>{{meme.titulo}}</h2>
-            <img [src]="imgPrefix + meme.imagemURL">
+
+<!-- Exercício -->
+<!-- <ul>
+    <li *ngFor="let arrayMeme of MEMES_GROUP">
+        <h1>{{arrayMeme.categoria}}</h1>
+
+        <div *ngFor="let meme of arrayMeme.memes; let odd = odd; index as index">
+            <div *ngIf="odd; else ParBlock">
+                <h2>{{meme.titulo}}</h2>
+                <img [src]="IMG_PREFIX + meme.imagemURL" width="200">
+            </div>
+            <ng-template #ParBlock>
+                <h1>{{index}} é PAR</h1>
+            </ng-template>
         </div>
-        <ng-template #ParBlock>
-            <h1>{{index}} é PAR</h1>
-        </ng-template>
-    </div>
-</div>
+    </li>
+</ul> -->
+
+<!-- Diretivas de Atributo -->
+
+<button (click)="colorSwitch()">Troca a cor do texto</button>
+
+<h2 [ngClass]="classCSS+' '+tsizeCSS">Texto Verde</h2>

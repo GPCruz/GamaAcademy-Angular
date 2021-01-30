@@ -10,6 +10,7 @@ import { ExDataBindingComponent } from './ex-data-binding/ex-data-binding.compon
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ExercicioDiretivasComponent } from './exercicio-diretivas/exercicio-diretivas.component';
+import { ExercicioPipesComponent } from './exercicio-pipes/exercicio-pipes.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ExercicioDiretivasComponent } from './exercicio-diretivas/exercicio-dir
     ContadorComponent,
     DataBindingComponent,
     ExDataBindingComponent,
-    ExercicioDiretivasComponent
+    ExercicioDiretivasComponent,
+    ExercicioPipesComponent
   ],
   imports: [
     BrowserModule,
